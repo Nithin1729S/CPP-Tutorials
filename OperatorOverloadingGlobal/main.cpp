@@ -16,6 +16,15 @@ int main() {
     }
 
     Mystring c=a+" "+b;
-    std::cout<<c.get_str()<<std::endl;
-    return 0;
+    std::cout<<a<<std::endl;
+    std::cout<<b<<std::endl;
+    std::cout<<c<<std::endl;
+
+    Mystring temp;
+    std::cout<<"Enter a string "<<std::endl;
+    std::cin>>temp;
+
+    std::cout<<temp<<std::endl;
+
+
 }

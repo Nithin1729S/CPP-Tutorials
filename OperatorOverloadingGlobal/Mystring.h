@@ -6,6 +6,10 @@ class Mystring
     friend bool operator==(const Mystring&lhs,const Mystring&rhs);
     friend Mystring operator+(const Mystring&lhs,const Mystring&rhs);
     friend Mystring operator-(const Mystring&obj);
+
+    friend std::ostream& operator<<(std::ostream&os,const Mystring&rhs); //insertion
+    friend std::istream& operator>>(std::istream&os,Mystring&rhs);  //extraction
+
 private:
     char *str;      // pointer to a char[] that holds a C-style string
 public:

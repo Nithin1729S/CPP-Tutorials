@@ -109,3 +109,19 @@ Mystring operator+(const Mystring&lhs,const Mystring&rhs){
     return temp;
 
 }
+
+///insertion
+std::ostream& operator<<(std::ostream&os,const Mystring&rhs){
+    os<<rhs.str;
+    return os;
+}
+
+
+//extraction
+std::istream& operator>>(std::istream&is,Mystring&rhs){
+    char *buff=new char[1000];
+    is>>buff;
+    rhs=Mystring{buff};
+    delete[] buff;
+    return is;
+}
